@@ -1,0 +1,449 @@
+/* ==================== BODY Y FUENTE GLOBAL ==================== */
+body {
+  background-color: #080a1e; /* azul oscuro */
+  color: #f5f1e9; /* letra cremita */
+  font-family: "Garamond", serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==================== HEADER CON LOGO Y NAVBAR ==================== */
+
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(8, 10, 30, 0.95);
+  z-index: 1000;
+  padding: 20px 0;
+}
+
+/* Logo */
+#logo-link {
+  position: absolute; /* mantiene el logo en la esquina izquierda */
+  left: 20px;
+}
+
+#logo {
+  width: 150px;
+}
+
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+  margin: 35px;
+  padding: 0;
+  font-family: 'Din Alternate', sans-serif;
+  font-weight: 700;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#navbar ul li {
+  margin: 0 15px;
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  color: #f5f1e9;
+  transition: 0.3s;
+}
+
+#navbar ul li a:hover {
+  color: #8c0f32;
+}
+
+/* ==================== HERO / CONTENIDO PRINCIPAL ==================== */
+#hero {
+  text-align: center;
+  padding: 150px 20px 50px 20px;
+  background-color: #080a1e;
+  color: #ffffff;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+p {
+  font-size: 1.2em;
+  max-width: 600px;
+  margin: 20px auto;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+a.button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 25px;
+  background-color: #6b0a23;
+  color: #f5f1e9;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+a.button:hover {
+  background-color: #8c0f32;
+}
+
+/* Limpiar floats */
+main::before {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ==================== MEDIA QUERIES PARA IPHONE / MÓVIL ==================== */
+@media (max-width: 768px) {
+  #logo {
+    width: 100px;
+    left: 15px;
+  }
+
+  #navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #navbar ul li {
+    margin: 8px 0;
+  }
+
+  main {
+    padding: 200px 20px 50px 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1em;
+    max-width: 90%;
+  }
+
+  a.button {
+    padding: 8px 20px;
+    font-size: 0.9em;
+  }
+}
+
+/* ==================== SECCIÓN 2: CAROUSEL + MANIFESTO ==================== */
+#manifesto {
+  background-color: #0b0c2e;
+  color: #ffffff;
+  padding: 80px 20px;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carousel {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  position: relative;
+  margin: 0;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  display: none;
+  border-radius: 8px;
+}
+
+.manifesto-text {
+  flex: 1;
+  min-width: 250px;
+  max-width: 500px;
+}
+
+.manifesto-text h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.manifesto-text p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  #manifesto {
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .carousel-container {
+    flex-direction: column;
+  }
+
+  .carousel, .manifesto-text {
+    max-width: 90%;
+  }
+
+  .carousel-image {
+    margin: 0 auto;
+  }
+}
+
+/* ==================== SECCIÓN 3 Y 4: MISMO ESTILO QUE CAROUSEL ==================== */
+.flex-section-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  background-color: #080a1e;
+  color: #ffffff;
+}
+
+.flex-section-container img {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  border-radius: 8px;
+}
+
+.flex-section-text {
+  flex: 1;
+  min-width: 250px;
+  max-width: 500px;
+}
+
+.flex-section-text h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.flex-section-text p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.flex-section-text a.button {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .flex-section-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .flex-section-container img,
+  .flex-section-text {
+    max-width: 90%;
+  }
+
+  .flex-section-text h2 {
+    font-size: 1.8em;
+  }
+
+  .flex-section-text p {
+    font-size: 1em;
+  }
+}
+
+
+/* ==================== SECCIÓN 3: Zigzag ==================== */
+.flex-section-container.zigzag {
+  flex-direction: row-reverse; /* invierte imagen y texto */
+}
+
+/* Responsive: en móviles siempre apilado */
+@media (max-width: 768px) {
+  .flex-section-container.zigzag {
+    flex-direction: column;
+  }
+}
+
+/* Video en sección 3: igual tamaño que la imagen del carousel */
+.flex-section-container .flex-video {
+  flex: 1;                  /* mismo comportamiento que la imagen */
+  min-width: 300px;         /* ancho mínimo */
+  max-width: 500px;         /* ancho máximo igual al carousel */
+  border-radius: 12px;       /* bordes redondeados */
+  object-fit: cover;        /* rellena el contenedor sin deformar */
+  display: block;           /* evita que se comporte como inline */
+}
+
+/* Responsive: en móvil ocupar 90% del ancho */
+@media (max-width: 768px) {
+  .flex-section-container .flex-video {
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto;         /* centrado */
+  }
+}
+
+
+/* Imagen centrada bajo el hero/manifesto */
+.center-image {
+  display: block;
+  margin: 50px auto; /* espacio arriba y abajo */
+  max-width: 600px; /* tamaño similar al carousel */
+  width: 100%;
+  border-radius: 8px; /* bordes redondeados */
+}
+
+
+#literary-essays {
+  text-align: center;       /* centra el texto y los blockquotes */
+  padding: 80px 20px;       /* espacio arriba y abajo */
+  max-width: 900px;         /* limita el ancho */
+  margin: 0 auto;           /* centra el contenedor */
+}
+
+#literary-essays h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+
+#literary-essays blockquote {
+  font-style: italic;
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin: 20px auto;       /* espacio arriba/abajo y centrado horizontal */
+  max-width: 800px;         /* no se extienda demasiado */
+  padding: 0 10px;          /* pequeño padding interno */
+  border-left: 3px solid #8c0f32;  /* opcional: barra decorativa izquierda */
+}
+
+/* ==================== QUOTES CENTRADAS ==================== */
+#philosophy-quotes {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+#philosophy-quotes h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+#philosophy-quotes .quotes-container {
+  max-width: 700px; /* similar a Literature */
+  margin: 0 auto;
+}
+
+#philosophy-quotes blockquote {
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #ffffff;
+  margin: 20px auto;
+}
+
+
+/* ==================== Quotes centradas ==================== */
+.centered-quotes {
+  text-align: center;
+  max-width: 700px; /* limita ancho para que no quede pegado */
+  margin: 80px auto; /* espacio arriba y abajo + centrado horizontal */
+  color: #ffffff;
+}
+
+.centered-quotes h2 {
+  font-size: 2.2em;
+  margin-bottom: 30px;
+}
+
+.centered-quotes blockquote {
+  font-size: 1.2em;
+  line-height: 1.8;
+  margin: 20px auto;
+  color: #f5f1e9;
+}
+
+.centered-quotes h2:last-child {
+  margin-top: 50px;
+}
+
+
+/* ==================== CONTACT FORM ==================== */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  width: 100%;
+}
+
+.contact-form label {
+  margin-top: 20px;
+  font-weight: bold;
+  font-family: 'Din Alternate', sans-serif;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-family: 'Garamond', serif;
+  background-color: #0b0c2e;
+  color: #f5f1e9;
+}
+
+.contact-form input[type="file"] {
+  padding: 5px;
+}
+
+.contact-form button {
+  margin-top: 30px;
+  align-self: flex-start;
+}
+
+/* Botón general (links y buttons iguales) */
+.button,
+button.button {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 1px solid #6b1f1f; /* bordo oscuro */
+  color: #6b1f1f;
+  background: transparent;
+  text-decoration: none;
+  font-family: 'Din Alternate', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.button:hover,
+button.button:hover {
+  background-color: #6b1f1f;
+  color: #f5f5f5;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Philosophy - Arcanum Litterarum</title>
+
+<!-- FAVICON -->
+<link rel="icon" href="logofondo.ico" sizes="any">
+
+<link rel="stylesheet" href="style.css">
+<!-- Google Fonts: DIN Alternate / D-DIN -->
+<link href="https://fonts.googleapis.com/css2?family=Din+Alternate:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <!-- Logo alineado igual que en about y literature -->
+  <a href="index.html" id="logo-link">
+    <img id="logo" src="logo.png" alt="Arcanum Litterarum Logo">
+  </a>
+
+  <nav id="navbar">
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="literature.html">Literature</a></li>
+      <li><a href="philosophy.html">Philosophy</a></li>
+      <li><a href="art.html">Art</a></li>
+      <li><a href="contribute.html">Contribute</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- Hero / Manifiesto centrado -->
+  <section id="hero">
+    <h1>PHILOSOPHY IN MODERN TIMES</h1>
+    <p>
+      In an era dominated by social media and rapid information, preserving philosophy is essential 
+      to avoid societal collapse. Thoughtful reflection and critical thinking guide us in understanding 
+      our world and ourselves.
+    </p>
+  </section>
+
+  <!-- Sección 2: Manifesto visual (imagen + texto como en featured-works) -->
+  <section id="manifesto">
+    <div class="carousel-container">
+      <div class="carousel">
+        <img class="carousel-image" src="raphael_school_of_athens.jpg" alt="Philosophy Image">
+      </div>
+      <div class="carousel-text">
+        <h2>Our Philosophical Vision</h2>
+        <p>
+          Philosophy is the bridge between action and understanding. In times of distraction, it 
+          reminds us to pause, reflect, and question the assumptions that govern our lives.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección 3: Philosophical Quotes centradas -->
+<section id="philosophy-quotes">
+  <h2>Quotes from Philosophers</h2>
+  <div class="quotes-container">
+    <blockquote>
+      “The unexamined life is not worth living.”<br>
+      — Socrates
+    </blockquote>
+    <blockquote>
+      “He who has a why to live can bear almost any how.”<br>
+      — Friedrich Nietzsche
+    </blockquote>
+    <blockquote>
+      “Happiness is not an ideal of reason but of imagination.”<br>
+      — Immanuel Kant
+    </blockquote>
+    <blockquote>
+      “I think, therefore I am.”<br>
+      — René Descartes
+    </blockquote>
+    <blockquote>
+      “Socrates”  
+    </blockquote>
+  </div>
+</section>
+
+
+  <!-- Sección 4: Philosophers Spotlights -->
+  <section class="flex-section-container">
+    <img src="socrates.webp" alt="Socrates">
+    <div class="flex-section-text">
+      <h2>Socrates</h2>
+      <p>The father of Western philosophy. Encouraged self-reflection and dialogue to uncover truth and wisdom.</p>
+    </div>
+  </section>
+
+  <section class="flex-section-container zigzag">
+    <img src="nietzsche.webp" alt="Friedrich Nietzsche">
+    <div class="flex-section-text">
+      <h2>Friedrich Nietzsche</h2>
+      <p>German philosopher known for his critique of morality and culture, exploring the depths of human existence.</p>
+    </div>
+  </section>
+
+  <section class="flex-section-container">
+    <img src="immanuelkant.jpg" alt="Immanuel Kant">
+    <div class="flex-section-text">
+      <h2>Immanuel Kant</h2>
+      <p>Pioneered modern philosophy, exploring reason, morality, and the conditions of human understanding.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- JS Carousel (igual que index/about/literature) -->
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll(".carousel-image");
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.style.display = i === index ? "block" : "none";
+  });
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Auto-slide cada 4s
+setInterval(nextSlide, 4000);
+showSlide(currentSlide);
+</script>
+
+</body>
+</html>

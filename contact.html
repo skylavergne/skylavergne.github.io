@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Arcanum Litterarum</title>
+
+<!-- FAVICON -->
+<link rel="icon" href="logofondo.ico" sizes="any">
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Din+Alternate:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" id="logo-link">
+    <img id="logo" src="logo.png" alt="Arcanum Litterarum Logo">
+  </a>
+
+  <nav id="navbar">
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="literature.html">Literature</a></li>
+      <li><a href="philosophy.html">Philosophy</a></li>
+      <li><a href="art.html">Art</a></li>
+      <li><a href="contribute.html">Contribute</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="hero">
+    <h1>Contact</h1>
+    <p>
+      Send us your work, your thoughts or your questions.  
+      <br><br>
+      We read every submission with care.
+    </p>
+  </section>
+
+  <!-- FORMULARIO -->
+  <section class="flex-section-container">
+    <div class="flex-section-text">
+
+      <form action="https://formspree.io/f/xwvnpeop"
+  method="POST"
+  enctype="multipart/form-data"
+  class="contact-form"
+      >
+
+        <input type="hidden" name="_redirect" value="thank-you.html">
+
+
+        <label>Name</label>
+        <input type="text" name="name" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Message</label>
+        <textarea name="message" rows="6" required></textarea>
+
+        <label>Attach your work</label>
+        <input type="file" name="file" accept=".pdf,.doc,.docx,.txt,.jpg,.png">
+
+        <button type="submit" class="button">Send</button>
+
+      </form>
+
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>

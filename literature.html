@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Literature - Arcanum Litterarum</title>
+
+<!-- FAVICON -->
+<link rel="icon" href="logofondo.ico" sizes="any">
+
+<link rel="stylesheet" href="style.css">
+<!-- Google Fonts: DIN Alternate / D-DIN -->
+<link href="https://fonts.googleapis.com/css2?family=Din+Alternate:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <!-- Logo alineado como en about.html -->
+  <a href="index.html" id="logo-link">
+    <img id="logo" src="logo.png" alt="Arcanum Litterarum Logo">
+  </a>
+
+  <nav id="navbar">
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="literature.html">Literature</a></li>
+      <li><a href="philosophy.html">Philosophy</a></li>
+      <li><a href="art.html">Art</a></li>
+      <li><a href="contribute.html">Contribute</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- Hero centrado -->
+  <section id="hero">
+    <h1>Literature</h1>
+    <p>
+      Explore the worlds hidden in words, from timeless classics to modern reflections. 
+      At Arcanum Litterarum, literature is the bridge between imagination and thought.
+    </p>
+  </section>
+
+  <!-- Sección 2: Featured Works (Carousel / Manifesto style) -->
+  <section id="featured-works">
+    <div class="carousel-container">
+      <div class="carousel">
+        <img class="carousel-image" src="library.jpg" alt="Book 1">
+      </div>
+      <div class="carousel-text">
+        <h2>Featured Works</h2>
+        <p>From classic literature to hidden gems, discover works that inspire reflection and creativity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección 3: Literary Quotes / Excerpts -->
+  <section id="literary-essays">
+    <h2>Excerpts & Quotes</h2>
+    <blockquote>
+      “The only way to deal with an unfree world is to become so absolutely free that your very existence is an act of rebellion.”<br>
+      — Albert Camus
+    </blockquote>
+    <blockquote>
+      “We read to know we are not alone.”<br>
+      — William Nicholson
+    </blockquote>
+    <blockquote>
+      “It is what you read when you don't have to that determines what you will be when you can't help it.”<br>
+      — Oscar Wilde
+    </blockquote>
+  </section>
+
+  <!-- Sección 4: Author Spotlights con zigzag y flex-section unificado -->
+  <section class="flex-section-container">
+    <img src="oscardwilde.jpg" alt="Oscar Wilde">
+    <div class="flex-section-text">
+      <h2>Oscar Wilde</h2>
+      <p>Irish poet and playwright. Celebrated for his wit, dark romance, and piercing commentary on society.</p>
+    </div>
+  </section>
+
+  <section class="flex-section-container zigzag">
+    <img src="virginiawoolf.jpg" alt="Virginia Woolf">
+    <div class="flex-section-text">
+      <h2>Virginia Woolf</h2>
+      <p>Pioneer of stream-of-consciousness writing, exploring the depth of human consciousness and emotion.</p>
+    </div>
+  </section>
+
+  <section class="flex-section-container">
+    <img src="franzkafka.jpg" alt="Franz Kafka">
+    <div class="flex-section-text">
+      <h2>Franz Kafka</h2>
+      <p>The master of existential tension and surreal reflection, showing the absurdity and depth of modern life.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- JS Carousel (igual que index/about) -->
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll(".carousel-image");
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.style.display = i === index ? "block" : "none";
+  });
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Auto-slide cada 4s
+setInterval(nextSlide, 4000);
+showSlide(currentSlide);
+</script>
+
+</body>
+</html>

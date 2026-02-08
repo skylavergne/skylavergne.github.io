@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Art - Arcanum Litterarum</title>
+
+<!-- FAVICON -->
+<link rel="icon" href="logofondo.ico" sizes="any">
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Din+Alternate:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <a href="index.html" id="logo-link">
+    <img id="logo" src="logo.png" alt="Arcanum Litterarum Logo">
+  </a>
+  <nav id="navbar">
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="literature.html">Literature</a></li>
+      <li><a href="philosophy.html">Philosophy</a></li>
+      <li><a href="art.html">Art</a></li>
+      <li><a href="contribute.html">Contribute</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- Hero / Manifesto centrado -->
+  <section id="hero">
+    <h1>Art and Aesthetic in the Academy</h1>
+    <p>
+      We explore the intersection of cinema, literature, and classical inspiration, uncovering the beauty and intellect within artistic expression. 
+      From timeless works to modern adaptations, art shapes thought and imagination.
+    </p>
+  </section>
+
+  <!-- Sección 2: Featured Frames (Carousel) -->
+  <section id="featured-frames">
+    <div class="carousel-container">
+      <div class="carousel">
+        <img class="carousel-image" src="dead-poets-society.jpg" alt="Dead Poets Society">
+        <img class="carousel-image" src="goodwillhunting.jpg" alt="Good Will Hunting">
+        <img class="carousel-image" src="prideandprejudice1.webp" alt="Pride and Prejudice">
+        <img class="carousel-image" src="sherlock.avif" alt="Sherlock">
+        <img class="carousel-image" src="shelley.webp" alt="Mary Shelley">
+      </div>
+      <div class="carousel-text">
+        <h2>Featured Frames</h2>
+        <p>Scenes from films and literary adaptations that inspire reflection, imagination, and the academic spirit in art.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección 3: Quotes / Citas de artistas y pensadores -->
+<section id="art-quotes" class="centered-quotes">
+  <h2>Quotes from Artists and Thinkers</h2>
+  <blockquote>
+    “Art enables us to find ourselves and lose ourselves at the same time.”<br>— Thomas Merton
+  </blockquote>
+  <blockquote>
+    “The aim of art is to represent not the outward appearance of things, but their inward significance.”<br>— Aristotle
+  </blockquote>
+  <blockquote>
+    “Imagination is the beginning of creation.”<br>— George Bernard Shaw
+  </blockquote>
+  <blockquote>
+    “The artist is not a special kind of person; rather, each person is a special kind of artist.”<br>— Ananda Coomaraswamy
+  </blockquote>
+  <h2>Dead Poets Society</h2>
+</section>
+
+
+  <!-- Sección 4: Frames / Obras con zigzag -->
+  <section class="flex-section-container">
+    <img src="deadpoets.jpg" alt="Dead Poets Society">
+    <div class="flex-section-text">
+      <h2>Dead Poets Society</h2>
+      <p>Celebrating poetry, passion and the awakening of thought in academic life.</p>
+    </div>
+  </section>
+
+  <section class="flex-section-container zigzag">
+    <img src="goodwillhunting.jpg" alt="Good Will Hunting">
+    <div class="flex-section-text">
+      <h2>Good Will Hunting</h2>
+      <p>A story of intellect, mentorship, and the transformative power of education.</p>
+    </div>
+  </section>
+
+  <section class="flex-section-container">
+    <img src="prideandprejudice.webp" alt="Pride and Prejudice">
+    <div class="flex-section-text">
+      <h2>Pride and Prejudice</h2>
+      <p>A timeless tale combining societal observation, character insight, and literary elegance.</p>
+    </div>
+  </section>
+
+  <section class="flex-section-container zigzag">
+    <img src="shelley.webp" alt="Mary Shelley">
+    <div class="flex-section-text">
+      <h2>Mary Shelley</h2>
+      <p>Exploring imagination, creation and the moral questions within human ingenuity.</p>
+    </div>
+  </section>
+
+  <section class="flex-section-container">
+    <img src="sherlock.webp" alt="Sherlock">
+    <div class="flex-section-text">
+      <h2>Sherlock Holmes</h2>
+      <p>Iconic detective stories highlighting intellect, deduction, and the art of observation.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- JS Carousel -->
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll(".carousel-image");
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.style.display = i === index ? "block" : "none";
+  });
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Auto-slide cada 4s
+setInterval(nextSlide, 4000);
+showSlide(currentSlide);
+</script>
+
+</body>
+</html>

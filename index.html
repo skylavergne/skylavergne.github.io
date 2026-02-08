@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arcanum Litterarum</title>
+
+<!-- FAVICON -->
+<link rel="icon" href="logofondo.ico" sizes="any">
+
+<link rel="stylesheet" href="style.css">
+<!-- Google Fonts: DIN Alternate / D-DIN -->
+<link href="https://fonts.googleapis.com/css2?family=Din+Alternate:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <a href="index.html" id="logo-link">
+  <img id="logo" src="logo.png" alt="Arcanum Litterarum Logo">
+</a>
+
+  <nav id="navbar">
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="literature.html">Literature</a></li>
+      <li><a href="philosophy.html">Philosophy</a></li>
+      <li><a href="art.html">Art</a></li>
+      <li><a href="contribute.html">Contribute</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section id="hero">
+    <h1>Welcome to Arcanum Litterarum</h1>
+    <p>Exploring the light and shadow of literature, art and thought. Join our journey into the world of books, philosophy, and creativity.</p>
+    <a class="button" href="about.html">Discover More</a>
+  </section>
+
+  <!-- Sección 2: Carousel + Manifesto -->
+  <section id="manifesto">
+    <div class="carousel-container">
+      <div class="carousel">
+        <img class="carousel-image" src="arcanumhero.png" alt="Slider 1">
+
+      </div>
+      <div class="manifesto-text">
+        <h2>Our Manifesto</h2>
+        <p>
+          Arcanum Litterarum is a space for the curious, for lovers of literature, philosophy and art. We explore the hidden layers of thought and creativity, where every page is a doorway to reflection.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Sección 3: Submit your work con video -->
+<section id="submit-work">
+  <div class="flex-section-container zigzag">
+    <video 
+      src="work.mp4"    
+      autoplay           
+      muted               
+      loop               
+      playsinline          
+      class="flex-video"   
+    ></video>
+    
+    <div class="flex-section-text">
+      <h2>Submit Your Work</h2>
+      <p>We invite writers, poets and artists to share their creations with our community. Send us your stories, essays or artworks and become part of Arcanum Litterarum.</p>
+      <a class="button" href="contribute.html">Submit</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Sección 4: Dark Academia Quote (imagen izquierda, texto derecha) -->
+<section id="extra-section">
+  <div class="flex-section-container">
+    <img src="oscardwilde.jpg" alt="Dark Academia Inspiration">
+    <div class="flex-section-text">
+      <h2>Words to remember</h2>
+      <p>
+        “We are all in the gutter, but some of us are looking at the stars.” <br>
+        — Oscar Wilde
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- JS Carousel -->
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll(".carousel-image");
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.style.display = i === index ? "block" : "none";
+  });
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Auto-slide every 4s
+setInterval(nextSlide, 4000);
+showSlide(currentSlide);
+</script>
+
+</body>
+</html>
